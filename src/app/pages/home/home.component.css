@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;  
+}
+.missoes{
+    background-color: aquamarine;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+
+
+}
