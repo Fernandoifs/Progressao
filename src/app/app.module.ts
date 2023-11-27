@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     DadosComponent,
     FooterComponent,
     NavbarComponent,
+    FormsModule,
 
   ],
   imports: [
@@ -39,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

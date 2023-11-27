@@ -1,10 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FormularioService {
-  conceitual: string = '';
-  checkpoints: string = '';
-  pratica: string = '';
+  private formularioData: any;
+
+  constructor() {}
+
+  salvarFormulario(formData: any) {
+    this.formularioData = formData;
+  }
+
+  getFormulario(): any {
+    return this.formularioData;
+  }
 }
