@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DadosComponent } from './pages/dados/dados.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';  // Importe o NavbarComponent aqui
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -16,7 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
+import { FormularioService } from './formulario.service';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,6 @@ import { FormsModule } from '@angular/forms';
     DadosComponent,
     FooterComponent,
     NavbarComponent,
-    FormsModule,
-
   ],
   imports: [
     BrowserModule,
@@ -40,9 +38,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-
   ],
-  providers: [],
+  providers: [FormularioService ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

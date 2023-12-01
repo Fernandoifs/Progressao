@@ -9,24 +9,23 @@ import { FormularioService } from 'src/app/formulario.service';
   styleUrls: ['./dados.component.css'],
 })
 export class DadosComponent {
-  conceitual: number = 0;
-  checkpoints: number = 0;
-  pratica: number = 0;
+  conceitual: string = '';
+  checkpoints: string = '';
+  pratica: string = '';
 
   constructor(
-    private router: Router,
-    private formularioService: FormularioService
+    private formularioService: FormularioService,
+    private router: Router
   ) {}
 
-  onSubmit() {
-    const dadosFormulario = {
-      conceitual: this.conceitual,
-      checkpoints: this.checkpoints,
-      pratica: this.pratica,
-    };
+  enviarFormulario(): void {
+    console.log(this.conceitual);
+    console.log(this.checkpoints);
+    console.log(this.pratica);
 
-    this.formularioService.salvarFormulario(dadosFormulario);
-
+    this.formularioService.setConceitual(this.conceitual);
+    this.formularioService.setCheckpoints(this.checkpoints);
+    this.formularioService.setPratica(this.pratica);
     this.router.navigate(['/home']);
   }
 }
